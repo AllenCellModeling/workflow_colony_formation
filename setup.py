@@ -59,6 +59,7 @@ requirements = [
     "aicspylibczi",
     "tqdm",
     "matplotlib",
+    "cloudpickle",
 ]
 
 extra_requirements = {
