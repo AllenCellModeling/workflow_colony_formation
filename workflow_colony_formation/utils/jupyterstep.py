@@ -46,7 +46,7 @@ class JupyterStep(Step):
             executer = ExecutePreprocessor(timeout=cell_timeout, kernel_name='python3')
             executer.preprocess(nb, {'metadata': {'path': str(nb_path)}})
         # Reload pickled self from config
-        with open(config_path, 'r') as file:
+        with open(config_path, 'rb') as file:
             self = cloudpickle.load(file)
         self.manifest.to_csv(
             self.step_local_staging_dir / Path("manifest.csv"), index=False
