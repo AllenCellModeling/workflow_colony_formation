@@ -37,6 +37,7 @@ clean:  ## clean all build, python, and testing files
 	find . -name '*.egg' -exec rm -f {} +
 	find . -name '*.pyc' -exec rm -f {} +
 	find . -name '*.pyo' -exec rm -f {} +
+	find . -name '.ipynb_checkpoints' -type d -exec rm -rf {} +
 	find . -name '*~' -exec rm -f {} +
 	find . -name '__pycache__' -exec rm -fr {} +
 	rm -fr .tox/
