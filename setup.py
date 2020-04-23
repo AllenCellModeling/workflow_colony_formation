@@ -60,6 +60,7 @@ requirements = [
     "tqdm",
     "matplotlib",
     "cloudpickle",
+    "cellpose",
 ]
 
 extra_requirements = {
