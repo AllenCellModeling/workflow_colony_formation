@@ -2,11 +2,10 @@
 # -*- coding: utf-8 -*-
 
 import logging
-from pathlib import Path
 
 from ...utils import JupyterStep
 
-from datastep import Step, log_run_params
+from datastep import log_run_params
 
 ###############################################################################
 
