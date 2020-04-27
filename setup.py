@@ -61,6 +61,8 @@ requirements = [
     "matplotlib",
     "cloudpickle",
     "cellpose",
+    "nbformat",
+    "nbconvert",
 ]
 
 extra_requirements = {
