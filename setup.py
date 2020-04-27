@@ -31,7 +31,7 @@ dev_requirements = [
     "pytest-cov==2.6.1",
     "pytest-raises>=0.10",
     "pytest-runner>=4.4",
-    "Sphinx>=2.0.0b1",
+    "Sphinx==2.4.4",
     "sphinx_rtd_theme>=0.1.2",
     "tox>=3.5.2",
     "twine>=1.13.0",
@@ -55,7 +55,7 @@ requirements = [
     "prefect",
     "python-dateutil<=2.8.0",  # need <=2.8.0 for quilt3 in step
     "c6",
-    "scikit-image", 
+    "scikit-image",
     "aicspylibczi",
     "tqdm",
     "matplotlib",
