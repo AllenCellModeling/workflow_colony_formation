@@ -1,0 +1,22 @@
+workflow\_colony\_formation.steps.img2seg package
+=================================================
+
+Submodules
+----------
+
+workflow\_colony\_formation.steps.img2seg.img2seg module
+--------------------------------------------------------
+
+.. automodule:: workflow_colony_formation.steps.img2seg.img2seg
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: workflow_colony_formation.steps.img2seg
+   :members:
+   :undoc-members:
+   :show-inheritance:

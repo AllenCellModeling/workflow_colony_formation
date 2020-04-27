@@ -1,0 +1,19 @@
+workflow\_colony\_formation package
+===================================
+
+Subpackages
+-----------
+
+.. toctree::
+
+   workflow_colony_formation.bin
+   workflow_colony_formation.steps
+   workflow_colony_formation.utils
+
+Module contents
+---------------
+
+.. automodule:: workflow_colony_formation
+   :members:
+   :undoc-members:
+   :show-inheritance:

@@ -1,0 +1,30 @@
+workflow\_colony\_formation.bin package
+=======================================
+
+Submodules
+----------
+
+workflow\_colony\_formation.bin.all module
+------------------------------------------
+
+.. automodule:: workflow_colony_formation.bin.all
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+workflow\_colony\_formation.bin.cli module
+------------------------------------------
+
+.. automodule:: workflow_colony_formation.bin.cli
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: workflow_colony_formation.bin
+   :members:
+   :undoc-members:
+   :show-inheritance:
