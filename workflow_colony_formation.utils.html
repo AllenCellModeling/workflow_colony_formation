@@ -187,11 +187,79 @@
 <div class="section" id="submodules">
 <h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
 </div>
-<div class="section" id="workflow-colony-formation-utils-jupyterstep-module">
-<h2>workflow_colony_formation.utils.jupyterstep module<a class="headerlink" href="#workflow-colony-formation-utils-jupyterstep-module" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="module-workflow_colony_formation.utils.jupyterstep">
+<span id="workflow-colony-formation-utils-jupyterstep-module"></span><h2>workflow_colony_formation.utils.jupyterstep module<a class="headerlink" href="#module-workflow_colony_formation.utils.jupyterstep" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="workflow_colony_formation.utils.jupyterstep.JupyterStep">
+<em class="property">class </em><code class="sig-prename descclassname">workflow_colony_formation.utils.jupyterstep.</code><code class="sig-name descname">JupyterStep</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/workflow_colony_formation/utils/jupyterstep.html#JupyterStep"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#workflow_colony_formation.utils.jupyterstep.JupyterStep" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">datastep.step.Step</span></code></p>
+<p>Modify the existing step class to automatically run a notebook</p>
+<dl class="method">
+<dt id="workflow_colony_formation.utils.jupyterstep.JupyterStep.run">
+<code class="sig-name descname">run</code><span class="sig-paren">(</span><em class="sig-param">nb_name=None</em>, <em class="sig-param">cell_timeout=3600</em>, <em class="sig-param">remove_config=True</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/workflow_colony_formation/utils/jupyterstep.html#JupyterStep.run"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#workflow_colony_formation.utils.jupyterstep.JupyterStep.run" title="Permalink to this definition">¶</a></dt>
+<dd><p>Run the notebook</p>
+<dl class="simple">
+<dt>nb_name: str or Path (name of step)</dt><dd><p>name of the notebook, assumed to be in same directory as step</p>
+</dd>
+<dt>cell_timeout: int (3600)</dt><dd><p>number of seconds to allow each cell to execut</p>
+</dd>
+<dt>remove_config: bool (True)</dt><dd><p>don’t keep serialized version of this class that provides info
+to the notebook</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="workflow_colony_formation.utils.jupyterstep.dump_step_config">
+<code class="sig-prename descclassname">workflow_colony_formation.utils.jupyterstep.</code><code class="sig-name descname">dump_step_config</code><span class="sig-paren">(</span><em class="sig-param">config</em>, <em class="sig-param">config_path=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/workflow_colony_formation/utils/jupyterstep.html#dump_step_config"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#workflow_colony_formation.utils.jupyterstep.dump_step_config" title="Permalink to this definition">¶</a></dt>
+<dd><p>Write out step config to be re-used by JupyterStep</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="workflow_colony_formation.utils.jupyterstep.load_step_config">
+<code class="sig-prename descclassname">workflow_colony_formation.utils.jupyterstep.</code><code class="sig-name descname">load_step_config</code><span class="sig-paren">(</span><em class="sig-param">step_name</em>, <em class="sig-param">upstream_names=[]</em>, <em class="sig-param">config_path=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/workflow_colony_formation/utils/jupyterstep.html#load_step_config"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#workflow_colony_formation.utils.jupyterstep.load_step_config" title="Permalink to this definition">¶</a></dt>
+<dd><p>Load the configuration from a config.pkl or create a namespace to store the same</p>
+</dd></dl>
+
 </div>
-<div class="section" id="module-contents">
-<h2>Module contents<a class="headerlink" href="#module-contents" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="module-workflow_colony_formation.utils">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-workflow_colony_formation.utils" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="workflow_colony_formation.utils.JupyterStep">
+<em class="property">class </em><code class="sig-prename descclassname">workflow_colony_formation.utils.</code><code class="sig-name descname">JupyterStep</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/workflow_colony_formation/utils/jupyterstep.html#JupyterStep"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#workflow_colony_formation.utils.JupyterStep" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">datastep.step.Step</span></code></p>
+<p>Modify the existing step class to automatically run a notebook</p>
+<dl class="method">
+<dt id="workflow_colony_formation.utils.JupyterStep.run">
+<code class="sig-name descname">run</code><span class="sig-paren">(</span><em class="sig-param">nb_name=None</em>, <em class="sig-param">cell_timeout=3600</em>, <em class="sig-param">remove_config=True</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/workflow_colony_formation/utils/jupyterstep.html#JupyterStep.run"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#workflow_colony_formation.utils.JupyterStep.run" title="Permalink to this definition">¶</a></dt>
+<dd><p>Run the notebook</p>
+<dl class="simple">
+<dt>nb_name: str or Path (name of step)</dt><dd><p>name of the notebook, assumed to be in same directory as step</p>
+</dd>
+<dt>cell_timeout: int (3600)</dt><dd><p>number of seconds to allow each cell to execut</p>
+</dd>
+<dt>remove_config: bool (True)</dt><dd><p>don’t keep serialized version of this class that provides info
+to the notebook</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="workflow_colony_formation.utils.load_step_config">
+<code class="sig-prename descclassname">workflow_colony_formation.utils.</code><code class="sig-name descname">load_step_config</code><span class="sig-paren">(</span><em class="sig-param">step_name</em>, <em class="sig-param">upstream_names=[]</em>, <em class="sig-param">config_path=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/workflow_colony_formation/utils/jupyterstep.html#load_step_config"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#workflow_colony_formation.utils.load_step_config" title="Permalink to this definition">¶</a></dt>
+<dd><p>Load the configuration from a config.pkl or create a namespace to store the same</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="workflow_colony_formation.utils.dump_step_config">
+<code class="sig-prename descclassname">workflow_colony_formation.utils.</code><code class="sig-name descname">dump_step_config</code><span class="sig-paren">(</span><em class="sig-param">config</em>, <em class="sig-param">config_path=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/workflow_colony_formation/utils/jupyterstep.html#dump_step_config"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#workflow_colony_formation.utils.dump_step_config" title="Permalink to this definition">¶</a></dt>
+<dd><p>Write out step config to be re-used by JupyterStep</p>
+</dd></dl>
+
 </div>
 </div>
 

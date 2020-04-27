@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>workflow_colony_formation.steps.null2mov.null2mov &mdash; Workflow Colony Formation 0.1.0 documentation</title>
+  <title>workflow_colony_formation.steps.mov2img.mov2img &mdash; Workflow Colony Formation 0.1.0 documentation</title>
   
 
   
@@ -152,7 +152,7 @@
         
           <li><a href="../../../workflow_colony_formation.html">workflow_colony_formation</a> &raquo;</li>
         
-      <li>workflow_colony_formation.steps.null2mov.null2mov</li>
+      <li>workflow_colony_formation.steps.mov2img.mov2img</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -167,43 +167,30 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <h1>Source code for workflow_colony_formation.steps.null2mov.null2mov</h1><div class="highlight"><pre>
+  <h1>Source code for workflow_colony_formation.steps.mov2img.mov2img</h1><div class="highlight"><pre>
 <span></span><span class="ch">#!/usr/bin/env python</span>
 <span class="c1"># -*- coding: utf-8 -*-</span>
 
 <span class="kn">import</span> <span class="nn">logging</span>
-<span class="kn">from</span> <span class="nn">pathlib</span> <span class="kn">import</span> <span class="n">Path</span>
-<span class="kn">import</span> <span class="nn">shutil</span>
-<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 
-<span class="kn">from</span> <span class="nn">.mov_filenames</span> <span class="kn">import</span> <span class="n">fns</span>
+<span class="kn">from</span> <span class="nn">...utils</span> <span class="kn">import</span> <span class="n">JupyterStep</span>
 
-<span class="kn">from</span> <span class="nn">datastep</span> <span class="kn">import</span> <span class="n">Step</span><span class="p">,</span> <span class="n">log_run_params</span>
+<span class="kn">from</span> <span class="nn">datastep</span> <span class="kn">import</span> <span class="n">log_run_params</span>
+
+<span class="c1">###############################################################################</span>
 
 <span class="n">log</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
 
+<span class="c1">###############################################################################</span>
 
-<div class="viewcode-block" id="Null2Mov"><a class="viewcode-back" href="../../../../workflow_colony_formation.steps.null2mov.html#workflow_colony_formation.steps.Null2Mov">[docs]</a><span class="k">class</span> <span class="nc">Null2Mov</span><span class="p">(</span><span class="n">Step</span><span class="p">):</span>
-<div class="viewcode-block" id="Null2Mov.run"><a class="viewcode-back" href="../../../../workflow_colony_formation.steps.null2mov.html#workflow_colony_formation.steps.Null2Mov.run">[docs]</a>    <span class="nd">@log_run_params</span>
+
+<div class="viewcode-block" id="Mov2Img"><a class="viewcode-back" href="../../../../workflow_colony_formation.steps.mov2img.html#workflow_colony_formation.steps.Mov2Img">[docs]</a><span class="k">class</span> <span class="nc">Mov2Img</span><span class="p">(</span><span class="n">JupyterStep</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">direct_upstream_tasks</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;null2mov&quot;</span><span class="p">],</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">direct_upstream_tasks</span><span class="o">=</span><span class="n">direct_upstream_tasks</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+<div class="viewcode-block" id="Mov2Img.run"><a class="viewcode-back" href="../../../../workflow_colony_formation.steps.mov2img.html#workflow_colony_formation.steps.Mov2Img.run">[docs]</a>    <span class="nd">@log_run_params</span>
     <span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Copy time lapse movies of colony formation to local staging.&quot;&quot;&quot;</span>
-        <span class="c1"># Subdirectory for the time lapse movies</span>
-        <span class="n">movdir</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">step_local_staging_dir</span> <span class="o">/</span> <span class="n">Path</span><span class="p">(</span><span class="s2">&quot;mov&quot;</span><span class="p">)</span>
-        <span class="n">movdir</span><span class="o">.</span><span class="n">mkdir</span><span class="p">(</span><span class="n">parents</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">exist_ok</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-
-        <span class="c1"># Copy images</span>
-        <span class="n">paths</span> <span class="o">=</span> <span class="n">fns</span><span class="p">()</span>
-        <span class="n">new_paths</span> <span class="o">=</span> <span class="p">[]</span>
-        <span class="k">for</span> <span class="n">old_path</span> <span class="ow">in</span> <span class="n">paths</span><span class="p">:</span>
-            <span class="n">new_path</span> <span class="o">=</span> <span class="n">movdir</span> <span class="o">/</span> <span class="n">old_path</span><span class="o">.</span><span class="n">name</span>
-            <span class="n">shutil</span><span class="o">.</span><span class="n">copyfile</span><span class="p">(</span><span class="n">old_path</span><span class="p">,</span> <span class="n">new_path</span><span class="p">)</span>
-            <span class="n">new_paths</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">new_path</span><span class="p">)</span>
-
-        <span class="c1"># Save manifest as csv</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">manifest</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="nb">dict</span><span class="p">(</span><span class="n">filepath</span><span class="o">=</span><span class="n">new_paths</span><span class="p">))</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">manifest</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">step_local_staging_dir</span> <span class="o">/</span> <span class="n">Path</span><span class="p">(</span><span class="s2">&quot;manifest.csv&quot;</span><span class="p">),</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span>
-        <span class="p">)</span></div></div>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></div></div>
 </pre></div>
 
            </div>
