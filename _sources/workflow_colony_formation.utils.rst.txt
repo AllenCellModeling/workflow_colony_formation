@@ -12,6 +12,14 @@ workflow\_colony\_formation.utils.jupyterstep module
    :undoc-members:
    :show-inheritance:
 
+workflow\_colony\_formation.utils.metrics module
+------------------------------------------------
+
+.. automodule:: workflow_colony_formation.utils.metrics
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 
 Module contents
 ---------------
