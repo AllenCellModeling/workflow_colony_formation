@@ -1,0 +1,17 @@
+digraph G {
+  node [shape=box]
+  null2mov -> mov2img
+  mov2img -> img2seg
+  img2seg -> seg2cen
+  seg2cen -> cen2met
+  seg2cen -> mod2cen
+  mod2cen -> cen2met
+  cen2met -> met2rep
+  null2mov [URL="https://github.com/AllenCellModeling/workflow_colony_formation/tree/master/workflow_colony_formation/steps/null2mov"]
+  mov2img [URL="https://github.com/AllenCellModeling/workflow_colony_formation/blob/master/workflow_colony_formation/steps/mov2img/mov2img.ipynb"]
+  img2seg [URL="https://github.com/AllenCellModeling/workflow_colony_formation/blob/master/workflow_colony_formation/steps/img2seg/img2seg.ipynb"]
+  seg2cen [URL="https://github.com/AllenCellModeling/workflow_colony_formation/blob/master/workflow_colony_formation/steps/seg2cen/seg2cen.ipynb"]
+  rankdir=LR
+ {rank = same; seg2cen; mod2cen};
+} 
+
