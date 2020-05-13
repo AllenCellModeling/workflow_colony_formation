@@ -201,7 +201,17 @@
 </div>
 <div class="section" id="workflow">
 <h2>Workflow<a class="headerlink" href="#workflow" title="Permalink to this headline">¶</a></h2>
-<a class="reference external image-reference" href="./imgs/workflow.png"><img alt="MTI-ABM Workflow" src="./imgs/workflow.png" /></a>
+<p>The steps and their dependencies or flow is described by the graph:</p>
+<a class="reference external image-reference" href="./docs/imgs/steps.svg"><img alt="MTI-ABM Workflow" src="./docs/imgs/steps.svg" /></a>
+<ul class="simple">
+<li><p><cite>``null2mov`</cite> &lt;<a class="reference external" href="https://github.com/AllenCellModeling/workflow_colony_formation/tree/master/workflow_colony_formation/steps/null2mov">https://github.com/AllenCellModeling/workflow_colony_formation/tree/master/workflow_colony_formation/steps/null2mov</a>&gt;`_ copies the timelapse data from on-premises storage and uploads it to quilt</p></li>
+<li><p><cite>``mov2img`</cite> &lt;<a class="reference external" href="https://github.com/AllenCellModeling/workflow_colony_formation/tree/master/workflow_colony_formation/steps/mov2img">https://github.com/AllenCellModeling/workflow_colony_formation/tree/master/workflow_colony_formation/steps/mov2img</a>&gt;`_ writes out readable frames from the complicated mosaic CZI</p></li>
+<li><p><cite>``img2seg`</cite> &lt;<a class="reference external" href="https://github.com/AllenCellModeling/workflow_colony_formation/blob/master/workflow_colony_formation/steps/img2seg/img2seg.ipynb">https://github.com/AllenCellModeling/workflow_colony_formation/blob/master/workflow_colony_formation/steps/img2seg/img2seg.ipynb</a>&gt;`_ segments the DNA channel from each frame using <a class="reference external" href="http://cellpose.org">Cellpose</a></p></li>
+<li><p><cite>``seg2cen`</cite> &lt;<a class="reference external" href="https://github.com/AllenCellModeling/workflow_colony_formation/blob/master/workflow_colony_formation/steps/seg2cen/seg2cen.ipynb">https://github.com/AllenCellModeling/workflow_colony_formation/blob/master/workflow_colony_formation/steps/seg2cen/seg2cen.ipynb</a>&gt;`_ takes the centroids of every segmented cell, does some post processing, and saves them as a simplified CSV</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">mod2cen</span></code> takes the centroid inputs and runs a parameter sweep, outputting simulated centroid locations</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cen2met</span></code> computes summary metrics for the experimental and simulated traces</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">met2rep</span></code> produces output images summarizing the computed metrics</p></li>
+</ul>
 </div>
 <div class="section" id="installation-and-running">
 <h2>Installation and running<a class="headerlink" href="#installation-and-running" title="Permalink to this headline">¶</a></h2>
