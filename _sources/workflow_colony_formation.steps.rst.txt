@@ -7,6 +7,7 @@ Subpackages
 .. toctree::
 
    workflow_colony_formation.steps.img2seg
+   workflow_colony_formation.steps.mod2cen
    workflow_colony_formation.steps.mov2img
    workflow_colony_formation.steps.null2mov
    workflow_colony_formation.steps.seg2cen
