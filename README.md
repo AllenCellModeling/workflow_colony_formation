@@ -28,7 +28,7 @@ The steps and their dependencies or flow is described by the graph:
 - [`mov2img`] writes out readable frames from the complicated mosaic CZI
 - [`img2seg`] segments the DNA channel from each frame using [Cellpose](http://cellpose.org)
 - [`seg2cen`] takes the centroids of every segmented cell, does some post processing, and saves them as a simplified CSV
-- `mod2cen` takes the centroid inputs and runs a parameter sweep, outputting simulated centroid locations
+- [`mod2cen`] takes the centroid inputs and runs a parameter sweep, outputting simulated centroid locations
 - `cen2met` computes summary metrics for the experimental and simulated traces
 - `met2rep` produces output images summarizing the computed metrics
 
@@ -36,6 +36,7 @@ The steps and their dependencies or flow is described by the graph:
 [`mov2img`]:https://github.com/AllenCellModeling/workflow_colony_formation/tree/master/workflow_colony_formation/steps/mov2img
 [`img2seg`]:https://github.com/AllenCellModeling/workflow_colony_formation/blob/master/workflow_colony_formation/steps/img2seg/img2seg.ipynb
 [`seg2cen`]:https://github.com/AllenCellModeling/workflow_colony_formation/blob/master/workflow_colony_formation/steps/seg2cen/seg2cen.ipynb
+[`mod2cen`]:https://github.com/AllenCellModeling/workflow_colony_formation/blob/master/workflow_colony_formation/steps/mod2cen/mod2cen.ipynb
 
 ## Installation and running
 
