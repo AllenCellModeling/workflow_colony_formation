@@ -1,0 +1,22 @@
+workflow\_colony\_formation.steps.cen2met package
+=================================================
+
+Submodules
+----------
+
+workflow\_colony\_formation.steps.cen2met.cen2met module
+--------------------------------------------------------
+
+.. automodule:: workflow_colony_formation.steps.cen2met.cen2met
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+
+Module contents
+---------------
+
+.. automodule:: workflow_colony_formation.steps.cen2met
+   :members:
+   :undoc-members:
+   :show-inheritance:

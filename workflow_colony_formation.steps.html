@@ -35,7 +35,7 @@
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="workflow_colony_formation.steps.img2seg package" href="workflow_colony_formation.steps.img2seg.html" />
+    <link rel="next" title="workflow_colony_formation.steps.cen2met package" href="workflow_colony_formation.steps.cen2met.html" />
     <link rel="prev" title="workflow_colony_formation.bin package" href="workflow_colony_formation.bin.html" /> 
 </head>
 
@@ -170,7 +170,7 @@
   
   <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="breadcrumb navigation">
       
-        <a href="workflow_colony_formation.steps.img2seg.html" class="btn btn-neutral float-right" title="workflow_colony_formation.steps.img2seg package" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="workflow_colony_formation.steps.cen2met.html" class="btn btn-neutral float-right" title="workflow_colony_formation.steps.cen2met package" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="workflow_colony_formation.bin.html" class="btn btn-neutral float-left" title="workflow_colony_formation.bin package" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
@@ -188,6 +188,12 @@
 <h2>Subpackages<a class="headerlink" href="#subpackages" title="Permalink to this headline">¶</a></h2>
 <div class="toctree-wrapper compound">
 <ul>
+<li class="toctree-l1"><a class="reference internal" href="workflow_colony_formation.steps.cen2met.html">workflow_colony_formation.steps.cen2met package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="workflow_colony_formation.steps.cen2met.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="workflow_colony_formation.steps.cen2met.html#module-workflow_colony_formation.steps.cen2met.cen2met">workflow_colony_formation.steps.cen2met.cen2met module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="workflow_colony_formation.steps.cen2met.html#module-workflow_colony_formation.steps.cen2met">Module contents</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="workflow_colony_formation.steps.img2seg.html">workflow_colony_formation.steps.img2seg package</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="workflow_colony_formation.steps.img2seg.html#submodules">Submodules</a></li>
 <li class="toctree-l2"><a class="reference internal" href="workflow_colony_formation.steps.img2seg.html#module-workflow_colony_formation.steps.img2seg.img2seg">workflow_colony_formation.steps.img2seg.img2seg module</a></li>
@@ -306,6 +312,27 @@ to the notebook</p>
 <dl class="method">
 <dt id="workflow_colony_formation.steps.Mod2Cen.run">
 <code class="sig-name descname">run</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/workflow_colony_formation/steps/mod2cen/mod2cen.html#Mod2Cen.run"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#workflow_colony_formation.steps.Mod2Cen.run" title="Permalink to this definition">¶</a></dt>
+<dd><p>Run the notebook</p>
+<dl class="simple">
+<dt>nb_name: str or Path (name of step)</dt><dd><p>name of the notebook, assumed to be in same directory as step</p>
+</dd>
+<dt>cell_timeout: int (3600)</dt><dd><p>number of seconds to allow each cell to execut</p>
+</dd>
+<dt>remove_config: bool (True)</dt><dd><p>don’t keep serialized version of this class that provides info
+to the notebook</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="workflow_colony_formation.steps.Cen2Met">
+<em class="property">class </em><code class="sig-prename descclassname">workflow_colony_formation.steps.</code><code class="sig-name descname">Cen2Met</code><span class="sig-paren">(</span><em class="sig-param">direct_upstream_tasks=['seg2cen', 'mod2cen'], **kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/workflow_colony_formation/steps/cen2met/cen2met.html#Cen2Met"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#workflow_colony_formation.steps.Cen2Met" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="workflow_colony_formation.utils.html#workflow_colony_formation.utils.jupyterstep.JupyterStep" title="workflow_colony_formation.utils.jupyterstep.JupyterStep"><code class="xref py py-class docutils literal notranslate"><span class="pre">workflow_colony_formation.utils.jupyterstep.JupyterStep</span></code></a></p>
+<dl class="method">
+<dt id="workflow_colony_formation.steps.Cen2Met.run">
+<code class="sig-name descname">run</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/workflow_colony_formation/steps/cen2met/cen2met.html#Cen2Met.run"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#workflow_colony_formation.steps.Cen2Met.run" title="Permalink to this definition">¶</a></dt>
 <dd><p>Run the notebook</p>
 <dl class="simple">
 <dt>nb_name: str or Path (name of step)</dt><dd><p>name of the notebook, assumed to be in same directory as step</p>

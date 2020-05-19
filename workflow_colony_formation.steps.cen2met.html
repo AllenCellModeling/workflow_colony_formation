@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>workflow_colony_formation.steps.img2seg package &mdash; Workflow Colony Formation 0.1.0 documentation</title>
+  <title>workflow_colony_formation.steps.cen2met package &mdash; Workflow Colony Formation 0.1.0 documentation</title>
   
 
   
@@ -35,8 +35,8 @@
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="workflow_colony_formation.steps.mod2cen package" href="workflow_colony_formation.steps.mod2cen.html" />
-    <link rel="prev" title="workflow_colony_formation.steps.cen2met package" href="workflow_colony_formation.steps.cen2met.html" /> 
+    <link rel="next" title="workflow_colony_formation.steps.img2seg package" href="workflow_colony_formation.steps.img2seg.html" />
+    <link rel="prev" title="workflow_colony_formation.steps package" href="workflow_colony_formation.steps.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -156,13 +156,13 @@
         
           <li><a href="workflow_colony_formation.steps.html">workflow_colony_formation.steps package</a> &raquo;</li>
         
-      <li>workflow_colony_formation.steps.img2seg package</li>
+      <li>workflow_colony_formation.steps.cen2met package</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="_sources/workflow_colony_formation.steps.img2seg.rst.txt" rel="nofollow"> View page source</a>
+            <a href="_sources/workflow_colony_formation.steps.cen2met.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -172,10 +172,10 @@
   
   <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="breadcrumb navigation">
       
-        <a href="workflow_colony_formation.steps.mod2cen.html" class="btn btn-neutral float-right" title="workflow_colony_formation.steps.mod2cen package" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="workflow_colony_formation.steps.img2seg.html" class="btn btn-neutral float-right" title="workflow_colony_formation.steps.img2seg package" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="workflow_colony_formation.steps.cen2met.html" class="btn btn-neutral float-left" title="workflow_colony_formation.steps.cen2met package" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="workflow_colony_formation.steps.html" class="btn btn-neutral float-left" title="workflow_colony_formation.steps package" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
   </div>
   
@@ -184,20 +184,20 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="workflow-colony-formation-steps-img2seg-package">
-<h1>workflow_colony_formation.steps.img2seg package<a class="headerlink" href="#workflow-colony-formation-steps-img2seg-package" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="workflow-colony-formation-steps-cen2met-package">
+<h1>workflow_colony_formation.steps.cen2met package<a class="headerlink" href="#workflow-colony-formation-steps-cen2met-package" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="submodules">
 <h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
 </div>
-<div class="section" id="module-workflow_colony_formation.steps.img2seg.img2seg">
-<span id="workflow-colony-formation-steps-img2seg-img2seg-module"></span><h2>workflow_colony_formation.steps.img2seg.img2seg module<a class="headerlink" href="#module-workflow_colony_formation.steps.img2seg.img2seg" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="module-workflow_colony_formation.steps.cen2met.cen2met">
+<span id="workflow-colony-formation-steps-cen2met-cen2met-module"></span><h2>workflow_colony_formation.steps.cen2met.cen2met module<a class="headerlink" href="#module-workflow_colony_formation.steps.cen2met.cen2met" title="Permalink to this headline">¶</a></h2>
 <dl class="class">
-<dt id="workflow_colony_formation.steps.img2seg.img2seg.Img2Seg">
-<em class="property">class </em><code class="sig-prename descclassname">workflow_colony_formation.steps.img2seg.img2seg.</code><code class="sig-name descname">Img2Seg</code><span class="sig-paren">(</span><em class="sig-param">direct_upstream_tasks=['mov2img'], **kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/workflow_colony_formation/steps/img2seg/img2seg.html#Img2Seg"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#workflow_colony_formation.steps.img2seg.img2seg.Img2Seg" title="Permalink to this definition">¶</a></dt>
+<dt id="workflow_colony_formation.steps.cen2met.cen2met.Cen2Met">
+<em class="property">class </em><code class="sig-prename descclassname">workflow_colony_formation.steps.cen2met.cen2met.</code><code class="sig-name descname">Cen2Met</code><span class="sig-paren">(</span><em class="sig-param">direct_upstream_tasks=['seg2cen', 'mod2cen'], **kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/workflow_colony_formation/steps/cen2met/cen2met.html#Cen2Met"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#workflow_colony_formation.steps.cen2met.cen2met.Cen2Met" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="workflow_colony_formation.utils.html#workflow_colony_formation.utils.jupyterstep.JupyterStep" title="workflow_colony_formation.utils.jupyterstep.JupyterStep"><code class="xref py py-class docutils literal notranslate"><span class="pre">workflow_colony_formation.utils.jupyterstep.JupyterStep</span></code></a></p>
 <dl class="method">
-<dt id="workflow_colony_formation.steps.img2seg.img2seg.Img2Seg.run">
-<code class="sig-name descname">run</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/workflow_colony_formation/steps/img2seg/img2seg.html#Img2Seg.run"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#workflow_colony_formation.steps.img2seg.img2seg.Img2Seg.run" title="Permalink to this definition">¶</a></dt>
+<dt id="workflow_colony_formation.steps.cen2met.cen2met.Cen2Met.run">
+<code class="sig-name descname">run</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/workflow_colony_formation/steps/cen2met/cen2met.html#Cen2Met.run"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#workflow_colony_formation.steps.cen2met.cen2met.Cen2Met.run" title="Permalink to this definition">¶</a></dt>
 <dd><p>Run the notebook</p>
 <dl class="simple">
 <dt>nb_name: str or Path (name of step)</dt><dd><p>name of the notebook, assumed to be in same directory as step</p>
@@ -213,15 +213,15 @@ to the notebook</p>
 </dd></dl>
 
 </div>
-<div class="section" id="module-workflow_colony_formation.steps.img2seg">
-<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-workflow_colony_formation.steps.img2seg" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="module-workflow_colony_formation.steps.cen2met">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-workflow_colony_formation.steps.cen2met" title="Permalink to this headline">¶</a></h2>
 <dl class="class">
-<dt id="workflow_colony_formation.steps.img2seg.Img2Seg">
-<em class="property">class </em><code class="sig-prename descclassname">workflow_colony_formation.steps.img2seg.</code><code class="sig-name descname">Img2Seg</code><span class="sig-paren">(</span><em class="sig-param">direct_upstream_tasks=['mov2img'], **kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/workflow_colony_formation/steps/img2seg/img2seg.html#Img2Seg"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#workflow_colony_formation.steps.img2seg.Img2Seg" title="Permalink to this definition">¶</a></dt>
+<dt id="workflow_colony_formation.steps.cen2met.Cen2Met">
+<em class="property">class </em><code class="sig-prename descclassname">workflow_colony_formation.steps.cen2met.</code><code class="sig-name descname">Cen2Met</code><span class="sig-paren">(</span><em class="sig-param">direct_upstream_tasks=['seg2cen', 'mod2cen'], **kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/workflow_colony_formation/steps/cen2met/cen2met.html#Cen2Met"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#workflow_colony_formation.steps.cen2met.Cen2Met" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="workflow_colony_formation.utils.html#workflow_colony_formation.utils.jupyterstep.JupyterStep" title="workflow_colony_formation.utils.jupyterstep.JupyterStep"><code class="xref py py-class docutils literal notranslate"><span class="pre">workflow_colony_formation.utils.jupyterstep.JupyterStep</span></code></a></p>
 <dl class="method">
-<dt id="workflow_colony_formation.steps.img2seg.Img2Seg.run">
-<code class="sig-name descname">run</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/workflow_colony_formation/steps/img2seg/img2seg.html#Img2Seg.run"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#workflow_colony_formation.steps.img2seg.Img2Seg.run" title="Permalink to this definition">¶</a></dt>
+<dt id="workflow_colony_formation.steps.cen2met.Cen2Met.run">
+<code class="sig-name descname">run</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/workflow_colony_formation/steps/cen2met/cen2met.html#Cen2Met.run"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#workflow_colony_formation.steps.cen2met.Cen2Met.run" title="Permalink to this definition">¶</a></dt>
 <dd><p>Run the notebook</p>
 <dl class="simple">
 <dt>nb_name: str or Path (name of step)</dt><dd><p>name of the notebook, assumed to be in same directory as step</p>
