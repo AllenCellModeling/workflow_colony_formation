@@ -20,4 +20,4 @@ class Mod2Cen(JupyterStep):
 
     @log_run_params
     def run(self, **kwargs):
-        super().run(**kwargs)
+        super().run(cell_timeout=60 * 60 * 24, **kwargs)
