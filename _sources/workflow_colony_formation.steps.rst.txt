@@ -8,6 +8,7 @@ Subpackages
 
    workflow_colony_formation.steps.cen2met
    workflow_colony_formation.steps.img2seg
+   workflow_colony_formation.steps.met2rep
    workflow_colony_formation.steps.mod2cen
    workflow_colony_formation.steps.mov2img
    workflow_colony_formation.steps.null2mov
